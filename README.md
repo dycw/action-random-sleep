@@ -1,3 +1,3 @@
-# `template-action`
+# `action-random-sleep`
 
-Template for Python actions
+Random sleep with logging
