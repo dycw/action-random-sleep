@@ -1,5 +1,5 @@
-name: abc
-description: description
+name: random-sleep
+description: Random sleep with logging
 
 branding:
   icon: activity
@@ -9,12 +9,21 @@ inputs:
   token:
     description: GitHub Personal Access Token
     default: ${{ github.token }}
-  flag:
-    description: Example flag
-    default: false
   dry-run:
     description: Dry run the CLI
     default: false
+  min:
+    description: Minimum duration, in seconds
+    default: 0
+  max:
+    description: Maximum duration, in seconds
+    default: 3600
+  step:
+    description: Step duration, in seconds
+    default: 1
+  log-freq:
+    description: Log frequency, in seconds
+    default: 60
 
 runs:
   using: composite
