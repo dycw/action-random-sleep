@@ -42,10 +42,13 @@ runs:
       run: uv tool install --reinstall dycw-actions
       shell: bash
 
-    - name: Run 'action abc'
+    - name: Run 'action sleep'
       env:
         TOKEN: ${{ inputs.token }}
-        FLAG: ${{ inputs.flag }}
         DRY_RUN: ${{ inputs.dry-run }}
-      run: uv tool run --from dycw-actions --isolated action abc
+        MIN: ${{ inputs.min }}
+        MAX: ${{ inputs.max }}
+        STEP: ${{ inputs.step }}
+        LOG_FREQ: ${{ inputs.log-freq }}
+      run: uv tool run --from dycw-actions --isolated action sleep
       shell: bash
