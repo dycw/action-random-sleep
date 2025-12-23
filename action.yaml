@@ -42,7 +42,6 @@ runs:
     - name: Run 'action sleep'
       env:
         TOKEN: ${{ inputs.token }}
-        DRY_RUN: ${{ inputs.dry-run }}
         MIN: ${{ inputs.min }}
         MAX: ${{ inputs.max }}
         STEP: ${{ inputs.step }}
